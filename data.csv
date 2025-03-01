@@ -1,0 +1,63 @@
+Nombre;Descrpcion;Ubicacion;Tipo de comida;Precio;Valoraciones;Visitado
+La Gildería;Bar de tapas especializado en gildas y otros pintxos vascos,ideal para tomar algo en un ambiente informal.;Barrio de La Latina;Tapas/Pintxos;<10€;4.6/5;No
+La Cuadra;Restaurante de cocina española tradicional,conocido por sus platos de carne a la parrilla y ambiente rústico.;Barrio de Chamberí;Española;20-30€;4.2/5;No
+Pan y Pepinillos;Pequeño local que ofrece bocadillos gourmet y una selección de encurtidos artesanales,perfecto para una comida rápida.;Barrio de Malasaña;Bocadillos;<10€;4.4/5;No
+Fratelli Figurato;Pizzería napolitana que ofrece auténticas pizzas al estilo de Nápoles,con ingredientes frescos y masa fermentada.;Barrio de Chamberí;Italiana/Pizza;10-20€;4.7/5;No
+Pizza Pronto;Pizzería en el barrio de Chamberí que ofrece auténticas pizzas al estilo napolitano,elaboradas con ingredientes frescos y masa de Alma.;Barrio de Chamberí;Italiana/Pizza;10-20€;4.5/5;No
+Kricky Pelton;Hamburguesería que celebra la cocina americana tradicional,ofreciendo hamburguesas gourmet y tortitas esponjosas en un ambiente familiar.;Barrio de Chamberí;Americana/Hamburguesas;10-20€;4.6/5;No
+Varro;Restaurante de cocina mediterránea que destaca por sus platos frescos y ambiente acogedor,ideal para comidas y cenas.;Barrio de Salamanca;Mediterránea;20-30€;4.3/5;No
+Antonia’s Burger;Pizzería que ofrece una variedad de pizzas artesanales en un ambiente moderno y acogedor.;Barrio de Sol;Italiana/Pizza;10-20€;4.4/5;No
+Little Dragon;Restaurante asiático especializado en platos de fusión,combinando sabores tradicionales con toques modernos.;Barrio de Malasaña;Fusión Asiática;20-30€;4.2/5;No
+Casa Macareno;Taberna clásica madrileña que ofrece tapas tradicionales y platos caseros en un ambiente castizo.;Barrio de Malasaña;Española/Tapas;10-20€;4.5/5;No
+Clima;Restaurante que combina la cocina de mercado con toques de autor,ofreciendo platos creativos en un ambiente elegante.;Barrio de Chamberí;De autor;20-30€;4.6/5;No
+Hanso;Cafetería especializada en cafés de especialidad y repostería artesanal,ideal para desayunos y meriendas.;Barrio de Malasaña;Cafetería/Repostería;<10€;4.7/5;No
+Dum Dum;Restaurante especializado en dumplings y otros platos de la cocina asiática,perfecto para compartir y disfrutar de sabores exóticos.;Barrio de Lavapiés;Asiática/Dumplings;10-20€;4.3/5;No
+Perro Pavlov;Acogedora cafetería en el barrio de La Latina,reconocida por su excelente café de especialidad y deliciosas tostadas de tomate. Ideal para desayunos y meriendas en un ambiente familiar.;Barrio de La Latina;Cafetería/Desayunos;<10€;4.5/5;No
+Hummuseria;Taberna de Oriente Medio que ofrece una variedad de platos basados en hummus,transportando a los comensales a un mercado mediterráneo lleno de colores y sabores.;Barrio de Chueca;Oriente Medio/Hummus;10-20€;4.5/5;No
+Beata Pasta;Restaurante especializado en pasta fresca artesanal,ofreciendo platos auténticos italianos en un ambiente acogedor.;Barrio de Chamberí;Italiana/Pasta;10-20€;4.5/5;No
+Manifiesto 13;Bar de tapas moderno que combina la cocina tradicional española con toques contemporáneos,ideal para compartir platos y disfrutar de una buena copa.;Barrio de Malasaña;Española/Tapas;10-20€;4.3/5;No
+Ostras Pedrin;Marisquería especializada en ostras y otros mariscos frescos,perfecta para los amantes de los frutos del mar en un ambiente informal.;Barrio de Salamanca;Marisquería;20-30€;4.4/5;No
+Clima Cafecito;Pequeña cafetería que ofrece cafés de especialidad y repostería artesanal,ideal para una pausa tranquila en el bullicio de la ciudad.;Barrio de Lavapiés;Cafetería;<10€;4.6/5;No
+Alma Bakery;Panadería artesanal que ofrece una variedad de panes y bollería recién horneada,perfecta para desayunos y brunch.;Barrio de Salamanca;Panadería/Bollería;<10€;4.5/5;No
+Biang Biang;Restaurante chino especializado en los tradicionales noodles Biang Biang,conocidos por su grosor y textura única,servidos con diversas salsas y acompañamientos.;Barrio de Salamanca;China;10-20€;4.3/5;No
+Buda Feliz 1974;Considerado el primer restaurante chino de Madrid,ofrece platos tradicionales como el pato laqueado y el dim sum en un ambiente auténtico.;Barrio de Chueca;China;10-20€;4.2/5;No
+Hundred Burgers;Hamburguesería gourmet que destaca por sus ingredientes de calidad y combinaciones innovadoras,ideal para una comida informal.;Barrio de Chamberí;Hamburguesas;10-20€;4.5/5;No
+Katsu Ramen Bar;Especializado en ramen y platos japoneses,ofrece una experiencia culinaria auténtica en un ambiente moderno.;Barrio de Salamanca;Japonesa;10-20€;4.3/5;No
+Taj Indian Restaurant;Restaurante que ofrece una amplia variedad de platos tradicionales de la India,destacando sus curries y panes naan.;Barrio de Lavapiés;India;10-20€;4.1/5;No
+Juana La Loca Pintxos Bar;Conocido por sus pintxos creativos y su famosa tortilla de patatas,es un lugar imprescindible para los amantes de la gastronomía vasca.;Barrio de La Latina;Vasca/Pintxos;10-20€;4.5/5;No
+Fayer Madrid;Restaurante que fusiona la cocina argentina con la israelí,ofreciendo platos únicos como carnes a la parrilla y hummus en un ambiente sofisticado.;Barrio de Chamberí;Fusión Argentina-Israelí;>30€;4.6/5;Sí
+Casa Pei;Restaurante de cocina asiática que ofrece una amplia variedad de platos tradicionales en un ambiente acogedor y familiar.;Barrio de Salamanca;Asiática;10-20€;4.3/5;Sí
+Distrito 798;Restaurante que fusiona la cocina asiática con la occidental,ofreciendo platos innovadores en un ambiente moderno y artístico.;Barrio de Salamanca;Fusión Asiática;20-30€;4.4/5;Sí
+Gran Café Santander;Cafetería histórica que ofrece una amplia variedad de platos tradicionales españoles y una selección de repostería en un ambiente clásico.;Barrio de Chamberí;Española/Cafetería;10-20€;4.2/5;Sí
+Sushita Cafe;Restaurante de cocina japonesa que ofrece una amplia variedad de sushi y otros platos asiáticos en un ambiente moderno y elegante.;Varias ubicaciones en Madrid,incluyendo Barrio de Salamanca y Chamberí;Japonesa/Sushi;20-30€;4.5/5;Sí
+Casa Paco;Restaurante tradicional madrileño conocido por sus excelentes carnes a la parrilla y platos clásicos en un ambiente rústico.;Barrio de La Latina;Española/Asador;Precio: 20-30€;4.3/5;Sí
+Café Manuela;Cafetería emblemática de Madrid que ofrece una amplia selección de bebidas y tapas en un ambiente bohemio y artístico.;Barrio de Malasaña;Cafetería/Tapas;10-20€;4.4/5;Sí
+Jam Montanera;Restaurante especializado en productos ibéricos de alta calidad,ofreciendo una variedad de platos tradicionales en un ambiente acogedor.;Barrio de Salamanca;Española/Ibéricos
+Barganzo;Restaurante especializado en cocina mediterránea con un enfoque en platos a base de garbanzos,ofreciendo opciones saludables y sabrosas en un ambiente moderno.;Barrio de Malasaña;Mediterránea/Vegetariana;10-20€;4.5/5;Sí
+Frankie Burgers;Hamburguesería que rinde homenaje a la sencillez de las hamburgueserías tradicionales,destacando su emblemática Frankie Cheese Bacon,elaborada con cortes selectos de vacuno de raza.;Calle Ponzano y Calle Espronceda;Hamburguesas;10-20€;4.5/5;Sí
+Barrutia y el 9;Restaurante que fusiona la cocina tradicional con influencias vascas y dominicanas,ofreciendo una experiencia gastronómica única en un ambiente acogedor.;Calle Santa Teresa 9,28004,Madrid;Mediterránea/Española;20-30€;4.6/5;Sí
+Taberna el Pimiento Verde;Taberna que ofrece platos tradicionales de la cocina vasca y española,destacando por sus pimientos verdes y otros platos típicos en un ambiente rústico.;Varias ubicaciones en Madrid,incluyendo el Barrio de Salamanca;Vasca/Española;20-30€;4.4/5;Sí
+Hype;Restaurante moderno que ofrece una fusión de cocinas internacionales en un ambiente chic y contemporáneo,ideal para cenas y cócteles.;Barrio de Chueca;Fusión Internacional;20-30€;4.3/5;Sí
+El Gordito;Restaurante especializado en cocina española tradicional,conocido por sus generosas raciones y ambiente familiar.;Barrio de La Latina
+Falafelería;Local especializado en falafel y otros platos de la cocina de Oriente Medio,ofreciendo opciones vegetarianas y veganas en un ambiente informal.;Barrio de Malasaña;Oriente Medio/Vegetariana;<10€;4.5/5;Sí
+Osom;Cafetería y brunch que ofrece una variedad de platos saludables y opciones de desayuno todo el día en un ambiente moderno y acogedor.;Barrio de Chamberí;Brunch/Saludable;10-20€;4.6/5;Sí
+Toma Café;Cafetería especializada en café de especialidad,ofreciendo también repostería artesanal y opciones de desayuno en un ambiente hipster.;Barrio de Malasaña;Cafetería;10-20€;
+Focacciamo;Especializados en focaccias artesanales de alta calidad,ofrecen una variedad de opciones que combinan ingredientes frescos y sabores auténticos italianos.;Calle San Bernardo 29,Madrid;Italiana
+Farah;Restaurante que trae la cocina del Mediterráneo oriental al barrio de La Latina,ofreciendo platos que combinan tradición y modernidad en un ambiente acogedor.;Barrio de La Latina,Madrid;Mediterráneo Oriental;20-30€;4.6/5;Sí
+Chino Santodomingo;Restaurante chino que ofrece una amplia variedad de platos tradicionales en un ambiente sencillo y acogedor.;Barrio de Salamanca,Madrid;China;10-20€;4.2/5;Sí
+Familia Oso;Restaurante familiar que ofrece cocina tradicional española con un toque moderno,destacando por sus platos caseros y ambiente acogedor.;Barrio de Chamberí,Madrid;Española;20-30€;4.4/5;Sí
+Basmati;Restaurante especializado en cocina india,ofreciendo una amplia variedad de platos tradicionales llenos de sabor y especias auténticas.;Barrio de Salamanca,Madrid;India;20-30€;4.3/5;Sí
+Juracha;Restaurante que fusiona la cocina mediterránea con toques de autor,ofreciendo platos creativos en un ambiente moderno y elegante.;Barrio de Malasaña,Madrid;Fusión Mediterránea;20-30€;4.5/5;Sí
+Bangalore Modern Indian Cuisine;Restaurante que ofrece una visión moderna de la cocina india,combinando sabores tradicionales con presentaciones contemporáneas en un ambiente elegante.;Calle de Diego de León 63,Madrid;India Moderna;20-30€;4.6/5;Sí
+Watts;Bar y restaurante que combina una oferta gastronómica variada con una amplia selección de cócteles,ideal para cenas informales y noches de música en vivo.;Barrio de Malasaña,Madrid;Internacional;10-20€;4.3/5;Sí
+Chez Pepito;Bistró francés que ofrece platos tradicionales de la cocina gala en un ambiente íntimo y acogedor
+Vira Vira;Restaurante que ofrece una experiencia culinaria única,combinando sabores tradicionales con técnicas modernas en un ambiente acogedor.;Barrio de Chueca,Madrid
+80 Grados;Restaurante que ofrece platos de alta cocina en formato de tapas y raciones,ideales para compartir en un ambiente moderno y desenfadado.;Varias ubicaciones en Madrid
+Lateral;Cadena de restaurantes que ofrece una amplia variedad de pinchos y raciones,combinando tradición y modernidad en un ambiente elegante.;Varias ubicaciones en Madrid
+Chino Arroz Chueca;Restaurante chino conocido por sus platos tradicionales y auténticos,ofreciendo una experiencia gastronómica genuina en el corazón de Chueca.;Calle de Barbieri,4,Madrid;China;10-20€;4.0/5;Sí
+Winnie the Pooh;Restaurante chino que destaca por sus platos abundantes y auténticos,siguiendo recetas tradicionales que evocan la cocina casera.;Calle de San Bernardino,6,Madrid;China;<10€;4.1/5;Sí
+Shangrila Dimsum Bar;Restaurante especializado en dim sum y platos tradicionales chinos,ofreciendo una experiencia culinaria auténtica en un ambiente moderno.;Calle de Leganitos,26,Madrid;China (Dim Sum);10-20€;4.3/5;Sí
+Milwaukee Burger;Restaurante especializado en hamburguesas al estilo de Milwaukee,conocidas como “butter burgers”,donde las hamburguesas se cocinan con mantequilla para realzar su sabor.;Calle de Manuela Malasaña,9,28004 Madrid;Hamburguesas americanas;€;4.5/5;Sí
+Mama Uma;Restaurante que ofrece una experiencia culinaria única,fusionando sabores tradicionales con técnicas modernas en un ambiente acogedor.;Calle de San Bernardo,85,28015 Madrid;F
+Pez Tortilla;Bar especializado en tortillas de patatas poco cuajadas y croquetas variadas,ofreciendo una experiencia gastronómica informal y de calidad.;Varias ubicaciones en Madrid
+La Consentida de Doré;Establecimiento conocido por sus Gildas exquisitas,fusionando ingredientes de manera auténtica para
