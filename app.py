@@ -1,51 +1,59 @@
-from langchain_community.chat_models import ChatOpenAI
-from langchain.chains import ConversationChain
-from langchain.memory import ConversationBufferMemory
-from langchain.schema import HumanMessage, AIMessage, ChatMessage, FunctionMessage
+from openai import OpenAI
+from datetime import datetime
 import os
 from dotenv import load_dotenv
-from datetime import datetime
 import json
 
 def _get_restaurant_info(restaurant_name):
-    print (f"Here is the information about {restaurant_name}...")
-
+    print(f"Fetching information about {restaurant_name}...")
+    
     # This is a placeholder function that would typically query a database or API
-    # to get information about a specific restaurant
+    # You could modify this to return None if the restaurant isn't found
     restaurant_info = {
         "name": restaurant_name,
         "cuisine": "Italian",
         "location": "123 Main St, New York, NY",
         "rating": 4.5,
-        "price_range": "$$"
+        "price_range": "$$",
     }
-
+    
     return restaurant_info
 
-# Define the function schema
-restaurant_info_schema = {
-    "name": "get_restaurant_info",
-    "description": "Get information about a specific restaurant",
-    "parameters": {
-        "type": "object",
-        "properties": {
-            "restaurant_name": {
-                "type": "string",
-                "description": "The name of the restaurant"
+# Define the tool schema
+tools = [
+    {
+        "type": "function",
+        "function": {
+            "name": "get_restaurant_info",
+            "description": "Get information about any restaurant. Always use this function when a user asks about a specific restaurant, even if you're not sure if it exists in the database.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "restaurant_name": {
+                        "type": "string",
+                        "description": "The name of the restaurant to look up"
+                    }
+                },
+                "required": ["restaurant_name"]
             }
-        },
-        "required": ["restaurant_name"]
+        }
     }
-}
+]
 
-# Define the system prompt
-SYSTEM_PROMPT = """You are a helpful restaurant recommendation assistant. You can:
-1. Provide information about specific restaurants
-2. Make restaurant recommendations based on user preferences
-3. Answer questions about dining and cuisines
+SYSTEM_PROMPT = """You are a helpful restaurant recommendation assistant. You have access to a function called get_restaurant_info that can retrieve information about restaurants.
 
-When users ask about specific restaurants, use the get_restaurant_info function to retrieve details.
-Keep your responses friendly and concise."""
+IMPORTANT: Whenever a user asks about ANY specific restaurant, you MUST use the get_restaurant_info function to get the information. Do not make assumptions or give generic responses.
+Even if you're not sure if the restaurant exists in the database, you should still attempt to use the function to check.
+
+Once you have the information, you can use it to provide a helpful response to the user. Communicate in natural language and do not include any raw or structured data in your response."""
+
+def send_messages(client, messages):
+    response = client.chat.completions.create(
+        model="deepseek-chat",
+        messages=messages,
+        tools=tools
+    )
+    return response.choices[0].message
 
 def main():
     # Load environment variables
@@ -56,19 +64,10 @@ def main():
         print("Please set your DEEPSEEK_API_KEY in the .env file")
         return
 
-    # Initialize the language model with function calling
-    llm = ChatOpenAI(
+    # Initialize the OpenAI client
+    client = OpenAI(
         api_key=os.getenv("DEEPSEEK_API_KEY"),
-        base_url="https://api.deepseek.com/",  # Adjust this URL according to Deepseek's API documentation
-        temperature=0.7,
-        model_name="deepseek-chat",  # Adjust the model name according to Deepseek's available models
-        functions=[restaurant_info_schema]
-    )
-    
-    # Create a conversation chain with memory
-    conversation = ConversationChain(
-        llm=llm,
-        memory=ConversationBufferMemory()
+        base_url="https://api.deepseek.com"
     )
 
     # Get current user and time information
@@ -79,6 +78,9 @@ def main():
     print(f"Session started at: {current_time} UTC")
     print("-" * 50)
 
+    # Initialize conversation with system message
+    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+
     while True:
         user_input = input("\nYou: ")
         
@@ -87,38 +89,38 @@ def main():
             break
 
         try:
-            # Create messages for the conversation with system prompt
-            messages = [
-                ChatMessage(role="system", content=SYSTEM_PROMPT),
-                HumanMessage(content=user_input)
-            ]
+            # Add user message to conversation
+            messages.append({"role": "user", "content": user_input})
             
-            # Get the response from the model
-            response = llm.invoke(messages)
+            # Get initial response from model
+            message = send_messages(client, messages)
+            messages.append(message)
 
-            # Check if the model wants to call a function
-            if response.additional_kwargs.get('function_call'):
-                print("\nBot: Calling a function...")
-
-                function_call = response.additional_kwargs['function_call']
+            # Handle tool calls if present
+            if message.tool_calls:
+                print("\n(Retrieving restaurant information...)")
                 
-                if function_call['name'] == 'get_restaurant_info':
-                    # Parse the arguments and call the function
-                    args = json.loads(function_call['arguments'])
-                    restaurant_info = _get_restaurant_info(args['restaurant_name'])
-                    
-                    # Add the function result to the conversation
-                    messages.append(FunctionMessage(
-                        content=restaurant_info,
-                        name='get_restaurant_info'
-                    ))
-                    
-                    # Get the final response
-                    final_response = llm.invoke(messages)
-                    print("\nBot:", final_response.content)
+                for tool_call in message.tool_calls:
+                    if tool_call.function.name == "get_restaurant_info":
+                        # Parse arguments and call function
+                        args = json.loads(tool_call.function.arguments)
+                        restaurant_info = _get_restaurant_info(args["restaurant_name"])
+                        
+                        # Add function result to messages
+                        messages.append({
+                            "role": "tool",
+                            "tool_call_id": tool_call.id,
+                            "content": json.dumps(restaurant_info)
+                        })
+                
+                # Get final response after function call
+                final_message = send_messages(client, messages)
+                messages.append(final_message)
+                print("\nBot:", final_message.content)
             else:
-                print("\nBot:", response.content)
-                
+                print("\nBot:", message.content)
+                print("\n(Tool was not called)")
+
         except Exception as e:
             print(f"\nError: {str(e)}")
 
